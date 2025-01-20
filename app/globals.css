@@ -123,3 +123,29 @@ img {
     transform: translateY(-15px);
   }
 }
+
+/* Slider */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none; /* Hilangkan scrollbar di Chrome, Safari */
+}
+
+.slider-container {
+  -ms-overflow-style: none; /* IE dan Edge */
+  scrollbar-width: none; /* Firefox */
+}
+

@@ -13,9 +13,19 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full bg-transcluet backdrop-blur-xl shadow-md z-50">
-      <div className="container mx-auto flex justify-between items-center px-4 py-6">
+      <div className="container mx-auto flex justify-between items-center px-6 py-6">
         {/* Logo */}
         <div className="flex items-center space-x-10">
+        <Link href="/">
+            <Image
+              src="/MTP_LogoWH.png"
+              alt="MTP Logo"
+              width={80}
+              height={50}
+              priority
+              className='block 2xl:hidden'
+            />
+          </Link>
           <Link href="/">
             <Image
               src="/MTP_LogoWH.png"
@@ -23,8 +33,10 @@ const Navbar = () => {
               width={150}
               height={50}
               priority
+              className='hidden 2xl:block'
             />
           </Link>
+         
           <div className="hidden md:flex space-x-10 font-bold">
             <Link href="#services" className="hover:text-blue-600">Layanan</Link>
             <Link href="#about" className="hover:text-blue-600">Tentang Kami</Link>
@@ -32,6 +44,7 @@ const Navbar = () => {
             <Link href="#contact" className="hover:text-blue-600">Kontak</Link>
           </div>
         </div>
+        
 
         {/* Kontak */}
         <div className="hidden md:flex items-center space-x-4">
@@ -56,7 +69,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md">
-          <div className="flex flex-col items-center py-4 space-y-4">
+          <div className="flex flex-col items-center py-2 space-y-4">
+            
             <Link href="#services" onClick={toggleMenu}>Layanan</Link>
             <Link href="#about" onClick={toggleMenu}>Tentang Kami</Link>
             <Link href="#portfolio" onClick={toggleMenu}>Portfolio</Link>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Navbar from "@/components/navigation/Navbar";
-
+import Footer from "@/components/footer/Footer";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -80,6 +80,7 @@ export default function RootLayout({
         <div className="relative overflow-hidden bg-gray-750 font-montserrat">
           <Navbar />
           <div className="relative">{children}</div>
+          <Footer />
         </div>
       </body>
     </html>

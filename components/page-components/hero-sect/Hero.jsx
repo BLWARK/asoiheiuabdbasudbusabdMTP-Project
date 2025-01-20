@@ -31,7 +31,19 @@ const Hero = () => {
           alt="Left Arrow"
           width={900}
           height={900}
-          className="animate-leftArrow"
+          className="animate-leftArrow 2xl:block hidden"
+        />
+      </div>
+      <div
+        data-aos="fade-right"
+        className="absolute -left-[500px] mt-20 transform opacity-30 -translate-y-1/2"
+      >
+        <Image
+          src="/HeroArrowLeft.png"
+          alt="Left Arrow"
+          width={600}
+          height={200}
+          className="animate-leftArrow 2xl:hidden block"
         />
       </div>
 
@@ -45,7 +57,19 @@ const Hero = () => {
           alt="Right Arrow"
           width={900}
           height={900}
-          className="animate-rightArrow"
+          className="animate-rightArrow 2xl:block hidden"
+        />
+      </div>
+      <div
+        data-aos="fade-left"
+        className="absolute -right-[500px] mt-20 transform opacity-30 -translate-y-1/2"
+      >
+        <Image
+          src="/HeroArrowRight.png"
+          alt="Left Arrow"
+          width={600}
+          height={200}
+          className="animate-leftArrow 2xl:hidden block"
         />
       </div>
 

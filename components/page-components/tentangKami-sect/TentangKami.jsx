@@ -21,7 +21,7 @@ const TentangKami = () => {
         <div className="w-full lg:w-1/2">
           <h2 className="text-3xl font-bold mb-4 text-main">Tentang Kami</h2>
           <p className="text-white leading-relaxed mb-6">
-            <strong>MTP</strong> adalah Perusahaan Jasa Event Management, Perencanaan Media, dan Pembelian Space Periklanan Media Konvensional, Digital, dan Media Luar Ruang. Kami merupakan bagian dari Grup <strong>Pantarei Communications</strong>.
+          MTP menyediakan layanan event management, perencanaan media, dan pembelian space iklan di media konvensional, digital, serta luar ruang. Sebagai bagian dari Grup Pantarei Communications, kami berkomitmen untuk membantu bisnis Anda menciptakan strategi yang efektif dan berdampak. Hubungi kami untuk mewujudkan rencana media atau event Anda.
           </p>
           {/* <h4 className="font-bold py-4 text-2xl text-main">Kelebihan kami</h4>
           <div className="space-y-6 mb-8">

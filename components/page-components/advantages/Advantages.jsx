@@ -27,14 +27,14 @@ const Advantages = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
           {/* Teks di Depan */}
           <div className="relative z-10 text-left px-8 lg:px-16">
-            <p className="text-4xl font-bold text-white leading-relaxed">
-              Dengan <span className='text-main'> pengalaman dan keunggulan </span> dalam berbagai media, kami memberikan <span className='text-main'> solusi terbaik </span> untuk kampanye Anda.
+            <p className="2xl:text-4xl text-2xl py-10 font-bold text-white leading-relaxed">
+              Dengan <span className='text-main'> pengalaman dan keunggulan </span> dalam berbagai media, kami memberikan <span className='text-main'> solusi terbaik </span> untuk kebutuhan Anda.
             </p>
           </div>
         </div>
 
         {/* Kanan - Point Kelebihan */}
-        <div className="w-full lg:w-1/2 py-40 flex flex-col justify-center items-start px-8 lg:px-16">
+        <div className="w-full lg:w-1/2 2xl:py-40 py-10 flex flex-col justify-center items-start px-8 lg:px-16">
           <ul className="space-y-4">
             {AdvantagesList.map((item, index) => (
               <li key={index} className="flex items-center gap-4">
