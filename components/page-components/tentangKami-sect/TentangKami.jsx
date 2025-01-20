@@ -4,14 +4,14 @@ import { FaCheck } from "react-icons/fa6";
 
 const TentangKami = () => {
   return (
-    <section id="tentang-kami" className="py-16 bg-gray-750  text-white">
+    <section id="tentang-kami" className="2xl:py-44 py-20 bg-gray-750  text-white">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
         {/* Kiri - Gambar */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/images/tentang-kami.jpg"
+            src="/AboutUs.png"
             alt="Tentang Kami"
-            width={500}
+            width={600}
             height={500}
             className="rounded-lg shadow-lg"
           />
