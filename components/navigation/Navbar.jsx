@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full bg-transcluet backdrop-blur-xl shadow-md z-50">
-      <div className="container mx-auto flex justify-between items-center  py-6">
+      <div className="container mx-auto flex justify-between items-center 2xl:px-0 px-5  py-6">
         {/* Logo */}
         <div className="flex items-center space-x-10">
           <Image
@@ -41,12 +41,12 @@ const Navbar = () => {
           />
 
           <div className="hidden md:flex space-x-10 font-bold text-white">
-            <button
-              onClick={() => scrollToSection("/")}
+            <a
+              href="/"
               className="hover:text-blue-600"
             >
               Beranda
-            </button>
+            </a>
             <button
               onClick={() => scrollToSection("tentang-kami")}
               className="hover:text-blue-600"
@@ -124,7 +124,7 @@ const Navbar = () => {
 
         {/* Navigation Menu */}
         <div className="flex-grow flex flex-col items-center py-12 space-y-6 font-bold text-white">
-          <button onClick={() => scrollToSection("services")}>Beranda</button>
+          <a href="/">Beranda</a>
           <button onClick={() => scrollToSection("tentang-kami")}>
             Tentang Kami
           </button>

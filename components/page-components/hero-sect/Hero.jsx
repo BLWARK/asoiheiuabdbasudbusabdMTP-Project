@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 const Hero = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200, once: true }); // Inisialisasi AOS langsung di komponen
+    AOS.init({ duration: 900, once: true }); // Inisialisasi AOS langsung di komponen
   }, []);
 
   return (

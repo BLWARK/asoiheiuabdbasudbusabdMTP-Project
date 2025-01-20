@@ -55,7 +55,7 @@ const Achievements = () => {
             data-aos="fade-up" // Animasi naik
             data-aos-delay="600" // Delay animasi 600ms
           >
-            <h3 className="text-3xl font-bold text-main">1 Triliun</h3>
+            <h3 className="text-3xl font-bold text-main">10M+</h3>
             <p className="text-gray-600">Pendapatan Klien</p>
           </div>
           <div

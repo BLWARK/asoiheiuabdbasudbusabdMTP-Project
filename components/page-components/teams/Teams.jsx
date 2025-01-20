@@ -2,11 +2,17 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Teams = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Inisialisasi AOS
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,7 +56,7 @@ const Teams = () => {
 
         {/* Slider untuk Mobile */}
         <div
-          className="relative w-full h-auto overflow-hidden md:hidden" // Slider hanya tampil di mobile
+          className="relative w-full h-auto overflow-hidden md:hidden"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -61,7 +67,10 @@ const Teams = () => {
             }}
           >
             {/* Slide 1 */}
-            <div className="w-full flex flex-col items-center justify-center text-center px-6 shrink-0">
+            <div
+              className="w-full flex flex-col items-center justify-center text-center px-6 shrink-0"
+              data-aos="fade-up"
+            >
               <div className="w-full max-w-sm">
                 <Image
                   src="/JL.png"
@@ -85,7 +94,11 @@ const Teams = () => {
             </div>
 
             {/* Slide 2 */}
-            <div className="w-full flex flex-col items-center justify-center text-center px-6 shrink-0">
+            <div
+              className="w-full flex flex-col items-center justify-center text-center px-6 shrink-0"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="w-full max-w-sm">
                 <Image
                   src="/PB.png"
@@ -112,7 +125,11 @@ const Teams = () => {
         {/* Grid untuk Desktop */}
         <div className="hidden md:grid grid-cols-2 gap-8">
           {/* Member 1 */}
-          <div className="flex flex-col items-center">
+          <div
+            className="flex flex-col items-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <Image
               src="/JL.png"
               alt="Jimmy Lizardo"
@@ -121,15 +138,19 @@ const Teams = () => {
               className="object-contain rounded-lg shadow-lg"
             />
             <h3 className="text-2xl font-bold text-main mt-4">Jimmy Lizardo</h3>
-            <p className="text-lg w-[70%] text-[10px] text-white mt-2 text-center">
-            Praktisi dan konsultasi media selama lebih dari 20 Tahun,
-                  Doktor Manajemen Spesialisi dalam Digital Out of Home Media
-                  Industry. Pernah menjabat sebagai media & Marketing Service
-                  Director Matari Advertising dan COO PT AMG.
+            <p className="text-lg w-[70%] text-white mt-2 text-center">
+              Praktisi dan konsultasi media selama lebih dari 20 Tahun, Doktor
+              Manajemen Spesialisi dalam Digital Out of Home Media Industry.
+              Pernah menjabat sebagai media & Marketing Service Director Matari
+              Advertising dan COO PT AMG.
             </p>
           </div>
           {/* Member 2 */}
-          <div className="flex flex-col items-center">
+          <div
+            className="flex flex-col items-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <Image
               src="/PB.png"
               alt="Yosafat Pandu Bagaskoro"
@@ -141,9 +162,9 @@ const Teams = () => {
               Yosafat Pandu Bagaskoro
             </h3>
             <p className="text-lg w-[70%] text-white mt-2 text-center">
-            Berpengalaman lebih dari 20 Tahun dalam penyusunan strategi
-                  media. Pernah menjabat sebagai Media Strategic Director Matari
-                  Advertising dan Media Manager PT Coca Cola Indonesia.
+              Berpengalaman lebih dari 20 Tahun dalam penyusunan strategi media.
+              Pernah menjabat sebagai Media Strategic Director Matari
+              Advertising dan Media Manager PT Coca Cola Indonesia.
             </p>
           </div>
         </div>
