@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${montserrat.variable} antialiased`}>
-        <div className="relative overflow-hidden bg-gray-750 font-montserrat">
+        <div className="relative overflow-hidden bg-black font-montserrat text-white">
           <Navbar />
           <div className="relative">{children}</div>
           <Footer />

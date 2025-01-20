@@ -39,7 +39,7 @@ const Achievements = () => {
             data-aos="fade-up" // Animasi naik
             data-aos-delay="200" // Delay animasi 200ms
           >
-            <h3 className="text-3xl font-bold text-main">500+</h3>
+            <h3 className="text-3xl font-bold text-main">100+</h3>
             <p className="text-gray-600">Klien Puas</p>
           </div>
           <div
@@ -47,7 +47,7 @@ const Achievements = () => {
             data-aos="fade-up" // Animasi naik
             data-aos-delay="400" // Delay animasi 400ms
           >
-            <h3 className="text-3xl font-bold text-main">300+</h3>
+            <h3 className="text-3xl font-bold text-main">100+</h3>
             <p className="text-gray-600">Proyek Selesai</p>
           </div>
           <div

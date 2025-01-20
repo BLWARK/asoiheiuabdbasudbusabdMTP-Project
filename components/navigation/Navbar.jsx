@@ -40,7 +40,7 @@ const Navbar = () => {
             className="hidden 2xl:block"
           />
 
-          <div className="hidden md:flex space-x-10 font-bold">
+          <div className="hidden md:flex space-x-10 font-bold text-white">
             <button
               onClick={() => scrollToSection("/")}
               className="hover:text-blue-600"
@@ -123,7 +123,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Menu */}
-        <div className="flex-grow flex flex-col items-center py-12 space-y-6 font-bold">
+        <div className="flex-grow flex flex-col items-center py-12 space-y-6 font-bold text-white">
           <button onClick={() => scrollToSection("services")}>Beranda</button>
           <button onClick={() => scrollToSection("tentang-kami")}>
             Tentang Kami

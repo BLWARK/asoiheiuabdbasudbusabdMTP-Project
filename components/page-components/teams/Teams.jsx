@@ -2,34 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-const teamMembers = [
-  {
-    name: "Jimmy Lizardo",
-    description:
-      "Praktisi dan konsultasi media selama lebih dari 20 Tahun, Doktor Manajemen Spesialisi dalam Digital Out of Home Media Industry.",
-    image: "/JL.png",
-  },
-  {
-    name: "Yosafat Pandu Bagaskoro",
-    description:
-      "Berpengalaman lebih dari 20 Tahun dalam penyusunan strategi media.",
-    image: "/PB.png",
-  },
-  {
-    name: "James Manurung",
-    description: "Berpengalaman lebih dari 20 Tahun di bidang Event Organisasi.",
-    image: "/JM.png",
-  },
-  {
-    name: "Jelly Pazola",
-    description:
-      "Berpengalaman di bidang Administrasi kurang lebih 10 Tahun.",
-    image: "/JP.png",
-  },
-];
 
 const Teams = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,28 +9,19 @@ const Teams = () => {
   const touchEndX = useRef(0);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Inisialisasi AOS
-  }, []);
-
-  // Auto-scroll setiap 7 detik
-  useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 7000);
 
-    return () => clearInterval(interval); // Membersihkan interval saat unmount
+    return () => clearInterval(interval);
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === teamMembers.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % 2); // Total slide = 2
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? teamMembers.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? 1 : prevIndex - 1));
   };
 
   const handleTouchStart = (e) => {
@@ -73,9 +36,9 @@ const Teams = () => {
   const handleSwipe = () => {
     const swipeDistance = touchStartX.current - touchEndX.current;
     if (swipeDistance > 50) {
-      nextSlide(); // Swipe ke kiri
+      nextSlide();
     } else if (swipeDistance < -50) {
-      prevSlide(); // Swipe ke kanan
+      prevSlide();
     }
   };
 
@@ -83,75 +46,106 @@ const Teams = () => {
     <section id="team" className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Here We Are</h2>
 
         {/* Slider untuk Mobile */}
         <div
-          className="md:hidden slider-container"
+          className="relative w-full h-auto overflow-hidden md:hidden" // Slider hanya tampil di mobile
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
           <div
-            className="slider"
+            className="flex transition-transform duration-500"
             style={{
               transform: `translateX(-${currentIndex * 100}%)`,
             }}
           >
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="slider-item p-4"
-                data-aos="fade-up"
-                data-aos-delay={index * 200} // Berikan delay untuk setiap item
-              >
-                <div className="bg-gray-800 h-[510px] rounded-lg overflow-hidden shadow-lg">
-                  <div className="relative  w-full h-[350px]">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-contain px-5 "
-                    />
-                  </div>
-                  <div className="px-4 py-2 mb-10">
-                    <h3 className="text-xl font-bold text-main mb-2">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-gray-300">
-                      {member.description}
-                    </p>
-                  </div>
-                </div>
+            {/* Slide 1 */}
+            <div className="w-full flex flex-col items-center justify-center text-center px-6 shrink-0">
+              <div className="w-full max-w-sm">
+                <Image
+                  src="/JL.png"
+                  alt="Jimmy Lizardo"
+                  width={500}
+                  height={500}
+                  className="object-contain rounded-lg shadow-lg"
+                />
               </div>
-            ))}
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-main mb-4">
+                  Jimmy Lizardo
+                </h3>
+                <p className="2xl:text-lg text-[14px] text-white">
+                  Praktisi dan konsultasi media selama lebih dari 20 Tahun,
+                  Doktor Manajemen Spesialisi dalam Digital Out of Home Media
+                  Industry. Pernah menjabat sebagai media & Marketing Service
+                  Director Matari Advertising dan COO PT AMG.
+                </p>
+              </div>
+            </div>
+
+            {/* Slide 2 */}
+            <div className="w-full flex flex-col items-center justify-center text-center px-6 shrink-0">
+              <div className="w-full max-w-sm">
+                <Image
+                  src="/PB.png"
+                  alt="Yosafat Pandu Bagaskoro"
+                  width={500}
+                  height={500}
+                  className="object-contain rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-main mb-4">
+                  Yosafat Pandu Bagaskoro
+                </h3>
+                <p className="text-[14px] text-white">
+                  Berpengalaman lebih dari 20 Tahun dalam penyusunan strategi
+                  media. Pernah menjabat sebagai Media Strategic Director Matari
+                  Advertising dan Media Manager PT Coca Cola Indonesia.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Grid untuk Desktop */}
-        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-              data-aos="fade-up" // Animasi dari bawah ke atas
-              data-aos-delay={index * 200} // Delay untuk setiap anggota
-            >
-              <div className="relative w-full h-[350px]">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover grayscale p-5 group-hover:grayscale-0 transition duration-300 ease-in-out"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-main mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-gray-300">{member.description}</p>
-              </div>
-            </div>
-          ))}
+        <div className="hidden md:grid grid-cols-2 gap-8">
+          {/* Member 1 */}
+          <div className="flex flex-col items-center">
+            <Image
+              src="/JL.png"
+              alt="Jimmy Lizardo"
+              width={500}
+              height={500}
+              className="object-contain rounded-lg shadow-lg"
+            />
+            <h3 className="text-2xl font-bold text-main mt-4">Jimmy Lizardo</h3>
+            <p className="2xl:text-lg w-[70%] text-[10px] text-white mt-2 text-center">
+            Praktisi dan konsultasi media selama lebih dari 20 Tahun,
+                  Doktor Manajemen Spesialisi dalam Digital Out of Home Media
+                  Industry. Pernah menjabat sebagai media & Marketing Service
+                  Director Matari Advertising dan COO PT AMG.
+            </p>
+          </div>
+          {/* Member 2 */}
+          <div className="flex flex-col items-center">
+            <Image
+              src="/PB.png"
+              alt="Yosafat Pandu Bagaskoro"
+              width={500}
+              height={500}
+              className="object-contain rounded-lg shadow-lg"
+            />
+            <h3 className="text-2xl font-bold text-main mt-4">
+              Yosafat Pandu Bagaskoro
+            </h3>
+            <p className="text-lg w-[70%] text-white mt-2 text-center">
+            Berpengalaman lebih dari 20 Tahun dalam penyusunan strategi
+                  media. Pernah menjabat sebagai Media Strategic Director Matari
+                  Advertising dan Media Manager PT Coca Cola Indonesia.
+            </p>
+          </div>
         </div>
       </div>
     </section>
