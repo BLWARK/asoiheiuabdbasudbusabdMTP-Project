@@ -87,8 +87,7 @@ const Teams = () => {
                 <p className="2xl:text-lg text-[14px] text-white">
                   Praktisi dan konsultasi media selama lebih dari 20 Tahun,
                   Doktor Manajemen Spesialisi dalam Digital Out of Home Media
-                  Industry. Pernah menjabat sebagai media & Marketing Service
-                  Director Matari Advertising dan COO PT AMG.
+                  Industry.
                 </p>
               </div>
             </div>
@@ -141,8 +140,6 @@ const Teams = () => {
             <p className="text-lg w-[70%] text-white mt-2 text-center">
               Praktisi dan konsultasi media selama lebih dari 20 Tahun, Doktor
               Manajemen Spesialisi dalam Digital Out of Home Media Industry.
-              Pernah menjabat sebagai media & Marketing Service Director Matari
-              Advertising dan COO PT AMG.
             </p>
           </div>
           {/* Member 2 */}
