@@ -1,37 +1,46 @@
-import React from 'react';
-import { FaProjectDiagram, FaShoppingCart, FaChartLine, FaComments } from 'react-icons/fa';
+"use client";
+import React, { useEffect } from "react";
+import { FaProjectDiagram, FaShoppingCart, FaChartLine, FaComments } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Inisialisasi AOS
+  }, []);
+
   const services = [
     {
-      title: 'Perencanaan Media',
-      icon: <FaProjectDiagram size={40} />, 
-      description: 'Strategi efektif dalam merancang dan mengelola media untuk mencapai target audiens.'
+      title: "Perencanaan Media",
+      icon: <FaProjectDiagram size={40} />,
+      description: "Strategi efektif dalam merancang dan mengelola media untuk mencapai target audiens.",
     },
     {
-      title: 'Pembelian Media',
-      icon: <FaShoppingCart size={40} />, 
-      description: 'Pengadaan ruang iklan di media konvensional dan digital secara optimal.'
+      title: "Pembelian Media",
+      icon: <FaShoppingCart size={40} />,
+      description: "Pengadaan ruang iklan di media konvensional dan digital secara optimal.",
     },
     {
-      title: 'Monitoring Media',
-      icon: <FaChartLine size={40} />, 
-      description: 'Pemantauan performa kampanye media untuk hasil yang maksimal.'
+      title: "Monitoring Media",
+      icon: <FaChartLine size={40} />,
+      description: "Pemantauan performa kampanye media untuk hasil yang maksimal.",
     },
     {
-      title: 'Konsultan Media',
-      icon: <FaComments size={40} />, 
-      description: 'Layanan konsultasi media untuk strategi pemasaran yang lebih efektif.'
+      title: "Konsultan Media",
+      icon: <FaComments size={40} />,
+      description: "Layanan konsultasi media untuk strategi pemasaran yang lebih efektif.",
     },
   ];
 
   return (
-    <section id="services" className="py-16 2xl:mt-20  mx-auto w-full">
+    <section id="layanan" className="py-16 2xl:mt-20 mx-auto w-full">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 200} // Tambahkan delay untuk setiap item
               className="service-card bg-gray-50 px-10 py-6 rounded-lg shadow-md overflow-hidden relative text-center group"
             >
               <div className="overlay"></div>

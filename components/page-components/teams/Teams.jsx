@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const teamMembers = [
   {
@@ -33,6 +35,10 @@ const Teams = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Inisialisasi AOS
+  }, []);
 
   // Auto-scroll setiap 7 detik
   useEffect(() => {
@@ -92,7 +98,12 @@ const Teams = () => {
             }}
           >
             {teamMembers.map((member, index) => (
-              <div key={index} className="slider-item p-4">
+              <div
+                key={index}
+                className="slider-item p-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 200} // Berikan delay untuk setiap item
+              >
                 <div className="bg-gray-800 h-[510px] rounded-lg overflow-hidden shadow-lg">
                   <div className="relative  w-full h-[350px]">
                     <Image
@@ -121,7 +132,9 @@ const Teams = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group relative  bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+              className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+              data-aos="fade-up" // Animasi dari bawah ke atas
+              data-aos-delay={index * 200} // Delay untuk setiap anggota
             >
               <div className="relative w-full h-[350px]">
                 <Image

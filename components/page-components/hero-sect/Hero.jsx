@@ -1,8 +1,8 @@
-"use client"
-import React, { useEffect } from 'react';
-import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+"use client";
+import React, { useEffect } from "react";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   useEffect(() => {
@@ -16,10 +16,12 @@ const Hero = () => {
         src="/BgHero1.jpg"
         alt="Hero Background"
         fill
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "cover", filter: "grayscale(100%)" }} // Tambahkan efek grayscale
         priority
-        
       />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-40"></div> {/* Overlay hitam dengan transparansi */}
 
       {/* Left Arrow */}
       <div
