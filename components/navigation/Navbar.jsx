@@ -78,7 +78,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           {/* Tombol Telepon */}
           <button
-            onClick={() => (window.location.href = "tel:+62123456789")}
+            onClick={() => (window.location.href = "tel:+62217223157")}
             className="flex items-center space-x-2 text-white hover:text-blue-600 rounded-lg shadow-md transition duration-300"
           >
             <FaPhoneAlt />
@@ -138,7 +138,7 @@ const Navbar = () => {
         {/* Kontak dan Logo di Bawah */}
         <div className="flex flex-col items-center py-20 space-y-4 border-gray-300">
           <button
-            onClick={() => (window.location.href = "tel:+62123456789")}
+            onClick={() => (window.location.href = "tel:+62217223157")}
             className="flex items-center space-x-2 text-white hover:text-blue-600"
           >
             <FaPhoneAlt />
