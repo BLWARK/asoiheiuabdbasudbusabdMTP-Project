@@ -137,13 +137,13 @@ const Navbar = () => {
 
         {/* Kontak dan Logo di Bawah */}
         <div className="flex flex-col items-center py-20 space-y-4 border-gray-300">
-          <a
-            href="tel:+62123456789"
+          <button
+            onClick={() => (window.location.href = "tel:+62123456789")}
             className="flex items-center space-x-2 text-white hover:text-blue-600"
           >
             <FaPhoneAlt />
-            <span>+62 123 456 789</span>
-          </a>
+            <span>(021)-7223157</span>
+          </button>
           <a
             href="mailto:info@mtpagency.com"
             className="flex items-center space-x-2 text-white hover:text-blue-600"
