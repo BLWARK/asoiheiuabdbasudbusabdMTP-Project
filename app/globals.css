@@ -149,3 +149,34 @@ img {
   scrollbar-width: none; /* Firefox */
 }
 
+/* Animasi Wipe untuk konten masuk dan keluar */
+@keyframes wipe-in {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wipe-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Kelas untuk animasi */
+.content-in {
+  animation: wipe-in 1s ease-in-out forwards;
+}
+
+.content-out {
+  animation: wipe-out 1s ease-in-out forwards;
+}

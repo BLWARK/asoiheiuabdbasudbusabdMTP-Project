@@ -83,7 +83,7 @@ const Hero = () => {
         <Image
           src="/MTP_LogoWH.png"
           alt="Logo MTP"
-          width={1000}
+          width={900}
           height={900}
           className="absolute"
         />

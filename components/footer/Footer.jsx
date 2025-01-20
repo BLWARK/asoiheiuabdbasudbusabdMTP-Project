@@ -1,14 +1,16 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaYoutube,
+  FaInstagram,
+  FaWhatsapp,
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
   FaFax,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -80,15 +82,30 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-main">Ikuti Kami</h3>
           <div className="flex items-center gap-4 mt-4">
-            <a href="#" className="p-3 rounded-full bg-main text-white">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="p-3 rounded-full bg-main text-white">
-              <FaTwitter />
-            </a>
-            <a href="#" className="p-3 rounded-full bg-main text-white">
-              <FaYoutube />
-            </a>
+            <button
+              onClick={() =>
+                window.open("https://www.instagram.com/mtpagency.id/", "_blank")
+              }
+              className="p-3 rounded-full bg-main text-white hover:bg-hover transition"
+            >
+              <FaInstagram />
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://x.com/mtpagency_id", "_blank")
+              }
+              className="p-3 rounded-full bg-main text-white hover:bg-hover transition"
+            >
+              <FaXTwitter />
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://wa.me/+628119791007", "_blank")
+              }
+              className="p-3 rounded-full bg-main text-white hover:bg-hover transition"
+            >
+              <FaWhatsapp />
+            </button>
           </div>
         </div>
       </div>

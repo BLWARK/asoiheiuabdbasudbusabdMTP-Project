@@ -34,7 +34,7 @@ const Navbar = () => {
           <Image
             src="/MTP_LogoWH.png"
             alt="MTP Logo"
-            width={150}
+            width={120}
             height={50}
             priority
             className="hidden 2xl:block"
@@ -76,20 +76,23 @@ const Navbar = () => {
 
         {/* Kontak */}
         <div className="hidden md:flex items-center space-x-4">
-          <a
-            href="tel:+62123456789"
-            className="flex items-center space-x-1 text-white hover:text-blue-600"
+          {/* Tombol Telepon */}
+          <button
+            onClick={() => (window.location.href = "tel:+62123456789")}
+            className="flex items-center space-x-2 text-white hover:text-blue-600 rounded-lg shadow-md transition duration-300"
           >
             <FaPhoneAlt />
             <span>(021)-7223157</span>
-          </a>
-          <a
-            href="mailto:info@mtpagency.com"
-            className="flex items-center space-x-1 text-white hover:text-blue-600"
+          </button>
+
+          {/* Tombol Email */}
+          <button
+            onClick={() => (window.location.href = "mailto:ptmtp@mtpagency.id")}
+            className="flex items-center space-x-2 text-white hover:text-blue-600  rounded-lg shadow-md transition duration-300"
           >
             <FaEnvelope />
             <span>ptmtp@mtpagency.id</span>
-          </a>
+          </button>
         </div>
 
         {/* Hamburger Menu */}
@@ -105,7 +108,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-screen w-full bg-main transform ${
+        className={`fixed top-0 right-0 h-screen w-full bg-pink-800 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col`}
       >
@@ -122,10 +125,14 @@ const Navbar = () => {
         {/* Navigation Menu */}
         <div className="flex-grow flex flex-col items-center py-12 space-y-6 font-bold">
           <button onClick={() => scrollToSection("services")}>Beranda</button>
-          <button onClick={() => scrollToSection("tentang-kami")}>Tentang Kami</button>
+          <button onClick={() => scrollToSection("tentang-kami")}>
+            Tentang Kami
+          </button>
           <button onClick={() => scrollToSection("services+")}>Layanan</button>
           <button onClick={() => scrollToSection("team")}>Our Teams</button>
-          <button onClick={() => scrollToSection("success-project")}>Project</button>
+          <button onClick={() => scrollToSection("success-project")}>
+            Project
+          </button>
         </div>
 
         {/* Kontak dan Logo di Bawah */}

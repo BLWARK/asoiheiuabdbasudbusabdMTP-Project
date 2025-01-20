@@ -11,7 +11,10 @@ const TentangKami = () => {
   }, []);
 
   return (
-    <section id="tentang-kami" className="2xl:py-44 py-20 bg-gray-750 text-white">
+    <section
+      id="tentang-kami"
+      className="2xl:py-44 py-20 bg-gray-750 text-white"
+    >
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
         {/* Kiri - Gambar */}
         <div
@@ -36,13 +39,18 @@ const TentangKami = () => {
         >
           <h2 className="text-3xl font-bold mb-4 text-main">Tentang Kami</h2>
           <p className="text-white leading-relaxed mb-6">
-            MTP menyediakan layanan event management, perencanaan media, dan pembelian space iklan di media konvensional,
-            digital, serta luar ruang. Sebagai bagian dari Grup Pantarei Communications, kami berkomitmen untuk membantu
-            bisnis Anda menciptakan strategi yang efektif dan berdampak. Hubungi kami untuk mewujudkan rencana media atau
-            event Anda.
+            MTP menyediakan layanan event management, perencanaan media, dan
+            pembelian space iklan di media konvensional, digital, serta luar
+            ruang. Sebagai bagian dari Grup Pantarei Communications, kami
+            berkomitmen untuk membantu bisnis Anda menciptakan strategi yang
+            efektif dan berdampak. Hubungi kami untuk mewujudkan rencana media
+            atau event Anda.
           </p>
           {/* Tombol Contact Us */}
-          <button className="mt-6 px-6 py-2 bg-main text-white rounded-lg shadow-md hover:bg-hover transition duration-300">
+          <button
+            className="mt-6 px-6 py-2 bg-main text-white rounded-lg shadow-md hover:bg-hover transition duration-300"
+            onClick={() => window.open("https://wa.me/+628119791007", "_blank")}
+          >
             Contact Us
           </button>
         </div>
