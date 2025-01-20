@@ -17,7 +17,7 @@ const servicesData = [
       'Social Media Monitoring',
       'Web & Apps Design, Development & Content',
     ],
-    image: '/digital.jpg',
+    image: '/Digital.jpg',
     reverse: true, // Gambar kiri, konten kanan
     isDark: true, // Gunakan dark mode
   },
