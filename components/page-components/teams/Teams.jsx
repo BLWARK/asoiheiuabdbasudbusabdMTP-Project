@@ -99,7 +99,7 @@ const Teams = () => {
                 <h3 className="text-2xl font-bold text-main mb-4">
                   Yosafat Pandu Bagaskoro
                 </h3>
-                <p className="text-[14px] text-white">
+                <p className="2xl:text-lg text-[14px] text-white">
                   Berpengalaman lebih dari 20 Tahun dalam penyusunan strategi
                   media. Pernah menjabat sebagai Media Strategic Director Matari
                   Advertising dan Media Manager PT Coca Cola Indonesia.
@@ -121,7 +121,7 @@ const Teams = () => {
               className="object-contain rounded-lg shadow-lg"
             />
             <h3 className="text-2xl font-bold text-main mt-4">Jimmy Lizardo</h3>
-            <p className="2xl:text-lg w-[70%] text-[10px] text-white mt-2 text-center">
+            <p className="text-lg w-[70%] text-[10px] text-white mt-2 text-center">
             Praktisi dan konsultasi media selama lebih dari 20 Tahun,
                   Doktor Manajemen Spesialisi dalam Digital Out of Home Media
                   Industry. Pernah menjabat sebagai media & Marketing Service

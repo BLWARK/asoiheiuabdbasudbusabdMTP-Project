@@ -32,7 +32,7 @@ const servicesData = [
       "Transportation Branding",
       "Airport & Station Branding",
     ],
-    image: "/DOOH.jpg",
+    image: "/DOOH2.jpg",
     reverse: false, // Gambar kanan, konten kiri
     isDark: false, // Tidak menggunakan dark mode
   },
