@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-10">
           <Image
-            src="/MTP_LogoWH.png"
+            src="/MTP_LogoWH_member.png"
             alt="MTP Logo"
             width={80}
             height={50}
@@ -32,9 +32,9 @@ const Navbar = () => {
             className="block 2xl:hidden"
           />
           <Image
-            src="/MTP_LogoWH.png"
+            src="/MTP_LogoWH_member.png"
             alt="MTP Logo"
-            width={120}
+            width={90}
             height={50}
             priority
             className="hidden 2xl:block"

@@ -81,12 +81,13 @@ const Hero = () => {
         className="absolute inset-0 flex items-center justify-center float float-animation transform transition-all"
       >
         <Image
-          src="/MTP_LogoWH.png"
+          src="/MTP_LogoWH_member.png"
           alt="Logo MTP"
-          width={900}
+          width={700}
           height={900}
           className="absolute"
         />
+        
       </div>
     </div>
   );

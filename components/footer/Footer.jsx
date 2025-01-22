@@ -34,7 +34,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="mb-4">
             <Image
-              src="/MTP_Logo.png"
+              src="/MTP_LogoWH_member.png"
               alt="MTP Logo"
               width={150}
               height={50}
