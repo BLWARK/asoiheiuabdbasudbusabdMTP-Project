@@ -85,7 +85,20 @@ const Hero = () => {
           alt="Logo MTP"
           width={700}
           height={900}
-          className="absolute"
+          className="absolute 2xl:block hidden"
+        />
+        
+      </div>
+      <div
+        data-aos="fade-up"
+        className="absolute inset-0 flex items-center justify-center float float-animation transform transition-all"
+      >
+        <Image
+          src="/MTP_LogoWH_member.png"
+          alt="Logo MTP"
+          width={300}
+          height={900}
+          className="absolute 2xl:hidden block"
         />
         
       </div>
